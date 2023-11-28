@@ -22,9 +22,11 @@ public class GeneralServices {
     public Optional<Book> findById(Long id) {
         return bookRepository.findById(id);
     }
-//    public Optional<Book> findByGenre(Genre genre) {
-//        return bookRepository.findByGenre(genre);
-//    }
+    public List<Book> findByGenre(Genre genre) {
+        List<Book>books = new ArrayList<>();
+        bookRepository.findByGenre(genre).forEach(books::add);
+        return books;
+    }
     public List<Book>findAllBooks(){
         List<Book> books = new ArrayList<>();
         bookRepository.findAll().forEach(books::add);

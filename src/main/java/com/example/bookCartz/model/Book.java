@@ -1,5 +1,7 @@
 package com.example.bookCartz.model;
 
+import com.example.bookCartz.enums.Genre;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -20,7 +22,7 @@ public class Book {
     @GeneratedValue
     private Long id;
     private String name;
-    private String Genre;
+    private Genre genre;
     private Integer quantity;
     private BigDecimal price;
 }
