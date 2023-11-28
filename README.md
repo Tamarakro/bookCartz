@@ -20,7 +20,7 @@ The above endpoints are only accessible to the user
 AUTHENTIFICATION(baseUrl = "/api/v1/auth")
   1. register(baseUrl/register) : This enables both users and admins to be able to register for the app.(Post Mapping, @RequestBody = registerRequest)
   2. authentification(baseUrl/authenticate) : This gives users and admins access to the required endpoints(Post Mapping, @RequestBody = authenticationRequest)
-The above endpoints are secured hence need no authentifiation
+The above endpoints are not secured hence need no authentifiation
 
 GENERAL(baseUrl = "/api/v1/book")
   1. findBookByGenre(baseUrl/genre) : This endpoint allows both users and admins to check for books according to their genre.(Get Mapping)
