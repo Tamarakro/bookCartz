@@ -21,14 +21,14 @@ import java.util.Optional;
 public class GeneralController {
     private GeneralServices generalServices;
     private Book book;
-    @GetMapping("/{genre}")
-    public ResponseEntity<Book>findBookByGenre(@PathVariable Genre genre){
-        Optional<Book>optionalBook = generalServices.findByGenre(genre);
-        if (!optionalBook.isEmpty()){
-            return new ResponseEntity<>(optionalBook.get(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
+//    @GetMapping("/{genre}")
+//    public ResponseEntity<Book>findBookByGenre(@PathVariable Genre genre){
+//        Optional<Book>optionalBook = generalServices.findByGenre(genre);
+//        if (!optionalBook.isEmpty()){
+//            return new ResponseEntity<>(optionalBook.get(), HttpStatus.OK);
+//        }
+//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//    }
     @GetMapping("/book")
     public ResponseEntity<List<Book>>findAllBooks(){
         List<Book>books = generalServices.findAllBooks();
