@@ -1,18 +1,14 @@
 package com.example.bookCartz.service;
 
 import com.example.bookCartz.config.JwtService;
-import com.example.bookCartz.controller.AuthenticationRequest;
-import com.example.bookCartz.controller.AuthenticationResponse;
-import com.example.bookCartz.controller.RegisterRequest;
-import com.example.bookCartz.enums.Role;
-import com.example.bookCartz.model.Book;
+import com.example.bookCartz.dtos.request.AuthenticationRequest;
+import com.example.bookCartz.dtos.response.AuthenticationResponse;
+import com.example.bookCartz.dtos.request.RegisterRequest;
 import com.example.bookCartz.model.User;
-import com.example.bookCartz.model.UserCart;
 import com.example.bookCartz.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

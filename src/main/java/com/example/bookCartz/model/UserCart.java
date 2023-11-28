@@ -21,7 +21,7 @@ public class UserCart {
     private User user;
     @Column(name = "book_name")
     private String bookName;
-    private Long quantity;
+    private Integer quantity;
     private BigDecimal price;
 
 }

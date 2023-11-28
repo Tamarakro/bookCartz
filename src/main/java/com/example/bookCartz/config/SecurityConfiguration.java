@@ -26,9 +26,10 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
                 .csrf(csrf->csrf.disable())
-                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/demo").permitAll())
-                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/demo/**").hasAuthority("USER"))
-                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/demo/**").hasAuthority("ADMIN"))
+                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/book").permitAll())
+                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/auth").permitAll())
+                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/user/**").hasAuthority("USER"))
+                .authorizeHttpRequests(auth->auth.requestMatchers("/api/v1/admin/**").hasAuthority("ADMIN"))
                 .authorizeHttpRequests(auth->auth.anyRequest().authenticated())
                 .sessionManagement(sess->sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)

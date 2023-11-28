@@ -11,9 +11,10 @@ ADMIN(baseUrl = "/api/v1/admin")
 The above endpoints are only accessible to the Admin
 
 USER(baseUrl = "/api/v1/user")
-  1. addbookToCart(baseUrl/book) : This endpoint enables users add book to their cart so they can checkout when necessary.(Post Mapping)
+  1. addbookToCart(baseUrl/book/id) : This endpoint enables users add book to their cart so they can checkout when necessary.(Patch Mapping, @requestBody = BookDto, @Pathvariable = id)
   2. findBookById(baseUrl/book/id) : This endpoint enables users search for a particular book in their cart.(Get Mapping, @pathVariable = id)
   3. updateDetails(baseUrl/details/id) : This endpoints helps users update their profile where necessary.(Patch Mapping, @pathVariable = id, @requestBody = updatedUser)
+  4. findAllBooks(baseUrl/Book) : Retrieves all the books in users cart.
 The above endpoints are only accessible to the user
 
 AUTHENTIFICATION(baseUrl = "/api/v1/auth")
@@ -23,7 +24,7 @@ The above endpoints are secured hence need no authentifiation
 
 GENERAL(baseUrl = "/api/v1/book")
   1. findBookByGenre(baseUrl/genre) : This endpoint allows both users and admins to check for books according to their genre.(Get Mapping)
-  2. findAllBooks(baseUrl) : This endpoints allows both users and admin to look through all the books regardless of genre.
+  2. findAllBooks(baseUrl) : This endpoints allows both users and admin to look through all the books regardless of genre.(Get Mapping)
 
 The tables alongside the fields for this project are listed below : 
   1. User Table : Required to store and use users information.

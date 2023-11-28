@@ -1,5 +1,8 @@
 package com.example.bookCartz.controller;
 
+import com.example.bookCartz.dtos.request.AuthenticationRequest;
+import com.example.bookCartz.dtos.request.RegisterRequest;
+import com.example.bookCartz.dtos.response.AuthenticationResponse;
 import com.example.bookCartz.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
